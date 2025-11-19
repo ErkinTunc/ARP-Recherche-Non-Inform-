@@ -1,5 +1,7 @@
-# ARP-Recherche-Non-Inform
+# ARP-Recherche-Non-Inform 
+Un rapport sur TP1&2 de Algorithmes pour la Résolution de Problèmes L3
 
+Les Developeurs: Erkin Tunc BOYA | Semih DOYNUK | Karam ELNASORY
 ---
 
 ## Ex1
