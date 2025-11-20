@@ -1,5 +1,6 @@
+package EX4;
 
-package AlgoRes;
+
 public class State {
     int cLeft;
     int mLeft;
@@ -20,8 +21,8 @@ public class State {
     }
     public boolean isBoatLeft() {
         return boatLeft;
-    
-    
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -31,7 +32,7 @@ public class State {
             return false;
         }
         State s = (State) o;
-        return cLeft == s.cLeft && mLeft == s.mLeft && boatLeft == s.boatLeft; 
+        return cLeft == s.cLeft && mLeft == s.mLeft && boatLeft == s.boatLeft;
     }
     @Override
     public int hashCode() {
@@ -43,7 +44,7 @@ public class State {
     public String toString() {
         return "(" + cLeft + ", " + mLeft + ", " + (boatLeft ? "G" : "D") + ")";
     }
-    
+
     public boolean isValidState() {
         int cRight = 3 - cLeft;
         int mRight = 3 - mLeft;
@@ -55,7 +56,7 @@ public class State {
         }
         return true;
     }
-    
+
     public State isFinaleState() {
         if (cLeft == 0 && mLeft == 0 && !boatLeft) {
             return this;

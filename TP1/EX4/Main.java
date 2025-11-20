@@ -1,7 +1,6 @@
-package AlgoRes;
-import java.util.List;
-import java.util.LinkedList;
+package EX4;
 
-public class Main {
-    
-}
+import java.util.LinkedList;
+import java.util.List;
+
+public class Main {}

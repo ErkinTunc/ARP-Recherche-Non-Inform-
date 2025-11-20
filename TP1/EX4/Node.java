@@ -1,14 +1,15 @@
-package AlgoRes;
+package EX4;
+
 import java.util.LinkedList;
 import java.util.List;
 
-
 public class Node {
+
     private final State s;
     private final Node p;
     private final Action a;
 
-    public Node(State state, Node node, Action action){
+    public Node(State state, Node node, Action action) {
         this.s = state;
         this.p = node;
         this.a = action;
@@ -17,7 +18,7 @@ public class Node {
     public State getState() {
         return this.s;
     }
-    
+
     public Node getParent() {
         return this.p;
     }
@@ -26,15 +27,15 @@ public class Node {
         return this.a;
     }
 
-    public Node succNode(Action a){
+    public Node succNode(Action a) {
         int c = this.s.getCLeft();
         int m = this.s.getMLeft();
         boolean boatLeft = this.s.isBoatLeft();
 
         int rc, rm;
         boolean rBoatLeft;
-        
-        if (boatLeft){
+
+        if (boatLeft) {
             rc = c - a.getDc();
             rm = m - a.getDm();
             rBoatLeft = false;
@@ -50,7 +51,7 @@ public class Node {
         return null;
     }
 
-    public List<Node> expand(){
+    public List<Node> expand() {
         List<Node> children = new LinkedList<>();
         for (Action action : Action.values()) {
             Node child = this.succNode(action);
@@ -60,6 +61,4 @@ public class Node {
         }
         return children;
     }
-
-
 }
