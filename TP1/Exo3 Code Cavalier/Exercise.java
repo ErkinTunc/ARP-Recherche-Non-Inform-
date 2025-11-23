@@ -1,3 +1,7 @@
+/**
+ * Class Exercise act as an entry point for the programme 
+ */
+
 public class Exercise
 {
     public static void main(String[] args)
