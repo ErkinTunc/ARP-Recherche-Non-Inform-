@@ -1,7 +1,9 @@
 package Ex4;
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class State {
+
     int cLeft;
     int mLeft;
     boolean boatLeft;
@@ -15,11 +17,12 @@ public class State {
     public int getCLeft() {
         return cLeft;
     }
+
     public int getMLeft() {
         return mLeft;
     }
-    public boolean isBoatLeft()
-    {
+
+    public boolean isBoatLeft() {
         return boatLeft;
     }
 
@@ -34,11 +37,11 @@ public class State {
         State s = (State) o;
         return cLeft == s.cLeft && mLeft == s.mLeft && boatLeft == s.boatLeft;
     }
+
     @Override
     public int hashCode() {
         return java.util.Objects.hash(cLeft, mLeft, boatLeft);
     }
-
 
     @Override
     public String toString() {
