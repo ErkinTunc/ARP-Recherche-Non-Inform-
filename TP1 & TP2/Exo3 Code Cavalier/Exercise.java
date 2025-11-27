@@ -1,5 +1,8 @@
 /**
  * Class Exercise act as an entry point for the programme
+ * 
+ * Compilation: javac -d ./bin/ ./*.java
+ * Execution: java -cp ./bin/ Exercise
  */
 
 public class Exercise
