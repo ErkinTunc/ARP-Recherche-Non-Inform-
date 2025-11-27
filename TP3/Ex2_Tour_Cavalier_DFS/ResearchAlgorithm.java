@@ -1,12 +1,12 @@
 package Ex2_Tour_Cavalier_DFS;
 
-// This is a uninformed research algorithm implementing a breadth-first search (BFS) strategy
-
 import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * This is a uninformed research algorithm implementing a breadth-first search (BFS) strategy
  * Algorithme de recherche non informée implémentant une stratégie de parcours en profondeur (DFS)
+ * 
  */
 public class ResearchAlgorithm {
 
@@ -31,7 +31,7 @@ public class ResearchAlgorithm {
                 return currentNode;
             }
 
-            
+
             frontier.addAll(currentNode.expand(problem));  // Exploration des enfants du noeud courant => parcours en largeur
         }
         return null;
