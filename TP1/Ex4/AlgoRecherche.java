@@ -7,9 +7,9 @@ package Ex4;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ResearchAlgorithm {
+public class AlgoRecherche {
 
-    public static Node search(MCB_Problem problem) {
+    public static Node recherche(MCB_Problem problem) {
         int counter = 0;
 
         List<Node> frontier = new LinkedList<>();
