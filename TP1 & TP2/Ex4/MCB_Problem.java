@@ -34,6 +34,11 @@ public class MCB_Problem
         return state.equals(goalState); // TODO : should we redefine .equals() in State class ?
     }
     
+    /**
+     * @deprecated 
+     * @param state
+     * @return
+     */
     public  Action[] getActions(State state)
     {
         // Want to create a very generic method to get possible actions from a given state
@@ -53,7 +58,7 @@ public class MCB_Problem
 
         for (int i = 0 ; i < Action.values().length; i++)
         {
-
+            // TODO
         }
     }
 
