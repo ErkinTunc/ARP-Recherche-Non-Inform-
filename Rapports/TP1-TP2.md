@@ -315,6 +315,9 @@ c(s,a,s') = 1
 
 Le problème autorise des retours arrière, ce qui peut créer des cycles si les états visités ne sont pas mémorisés.
 
+<img src="img/2-Chemin-de-Problematique.png" width="330">
+<img src="img/3,3,G-peut-etre-acceder-par-2,2,D-et-1,3,D.png" width="330">
+
 ---
 
 # Compilation & Exécution
