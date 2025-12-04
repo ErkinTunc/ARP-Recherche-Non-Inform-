@@ -23,16 +23,7 @@ public class Problem
     public State initialState()
     {
         return new State(this.startCity);
-    }
-
-    /**
-     * 
-     * @return
-     */
-    public State succession(State state, City cityToVisit)
-    {
-
-    }
+    }    
 
     /**
      * 

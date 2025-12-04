@@ -64,6 +64,17 @@ public class State
 
     /**
      * 
+     * @return
+     */
+    public State succession(State state, City cityToVisit)
+    {
+        ArrayList<City> newVisitedCities = new ArrayList<>(state.visitedCities()) ;
+        newVisitedCities.add(cityToVisit) ;
+        return new State(cityToVisit, newVisitedCities) ;
+    }
+
+    /**
+     * 
      */
     @Override
     public String toString()

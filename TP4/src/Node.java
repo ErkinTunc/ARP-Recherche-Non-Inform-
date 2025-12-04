@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 public class Node
 {
     private State state ;
@@ -54,6 +57,22 @@ public class Node
     }
 
 
+    /**
+     * 
+     */
+
+    public ArrayList<City> path ()
+    {
+        ArrayList<City> res = new ArrayList<>() ;
+        City currentNode = this ;
+        
+        while ( currentNode != null )
+        {
+            res.add(0, currentNode.state.currenCity() ) ;
+            currentNode = currentNode.parentNode() ;
+        }
+        return res ;
+    }
 
 
 }
