@@ -1,4 +1,3 @@
-package  src;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -9,6 +8,7 @@ public class Main
     {
         File file = new File("us_capitals.txt");
         ArrayList<City> cities = City.readCitiesFromFile(file);
+        System.out.println("Number of cities loaded: " + cities.size());
         
         City startCity = cities.get(0); // Assuming the first city is the starting point
         Problem problem = new Problem(cities, startCity);
@@ -25,3 +25,5 @@ public class Main
         }
     }
 }
+
+

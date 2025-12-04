@@ -1,4 +1,3 @@
-package src ;
 
 public class Edge implements Comparable<Edge>
 {

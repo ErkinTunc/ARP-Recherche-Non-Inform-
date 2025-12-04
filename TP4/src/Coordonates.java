@@ -1,4 +1,3 @@
-package src ;
 
 /**
  * Coordonates class representing a point in a 2D space.

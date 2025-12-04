@@ -1,4 +1,4 @@
-package src ;
+
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,6 +38,7 @@ public class City
     }
 
     /**
+     * @deprecated 
      * Read a representation of a City from a file
      * Format is : name x y
      * @param file
@@ -79,19 +80,33 @@ public class City
 
     public static ArrayList<City> readCitiesFromFile ( File file )
     {
-        ArrayList<City> cities = new ArrayList<>() ;
-        
-        File[] files = file.listFiles() ;
+        ArrayList<City> cities = new ArrayList<>();
 
-        while ( files != null )
-        {
-            City city = City.readCityFromFile(file) ;
+        try (Scanner scanner = new Scanner(file)) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine().trim();
+                if (line.isEmpty()) continue;
 
-            if ( city != null )
-            {
-                cities.add(city) ;
+                // split on whitespace (handles multiple spaces)
+                String[] tokens = line.split("\\s+");
+                if (tokens.length < 3) continue;
+
+                // Some input files may not include a textual name; use the first token as name
+                String name = tokens[0];
+                try {
+                    int x = Integer.parseInt(tokens[1]);
+                    int y = Integer.parseInt(tokens[2]);
+                    Coordonates coord = new Coordonates(x, y);
+                    cities.add(new City(name, coord));
+                } catch (NumberFormatException nfe) {
+                    // skip malformed lines
+                    continue;
+                }
             }
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found: " + e.getMessage());
         }
-        return cities ;
+
+        return cities;
     }
 }
