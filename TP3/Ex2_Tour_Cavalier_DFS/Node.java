@@ -10,7 +10,6 @@ public class Node {
     private final State state;  // l'état associé à ce nœud
     private final Node parent;  // le nœud parent
     private final KnightsTourProblem.Action parentAction; // l'action qui a conduit à cet état
-
     
     /* ------------------ constructeurs ------------------ */
     public Node(State state, Node node, KnightsTourProblem.Action action)
