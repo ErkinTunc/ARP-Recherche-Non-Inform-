@@ -41,16 +41,8 @@ public class Problem
      */
     public boolean isGoalState(State state)
     {
-        if (state.visitedCities() )
+        return ( state.visitedCities().size() == this.cities.size() ) ;
     }
     
-    /**
-     * 
-     * @return
-     */
-    public List<Action> actions()
-    {
-
-    }
     
 }

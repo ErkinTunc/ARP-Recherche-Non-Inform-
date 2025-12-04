@@ -82,20 +82,16 @@ public class City
         ArrayList<City> cities = new ArrayList<>() ;
         
         File[] files = file.listFiles() ;
-        
-        if ( files != null )
-        {
-            for ( line : file )
-            {
-                City city = City.readCityFromFile(file) ;
 
-                if ( city != null )
-                {
-                    cities.add(city) ;
-                }
+        while ( files != null )
+        {
+            City city = City.readCityFromFile(file) ;
+
+            if ( city != null )
+            {
+                cities.add(city) ;
             }
         }
-        
         return cities ;
     }
 }
