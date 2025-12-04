@@ -6,6 +6,7 @@ Le dépôt regroupe les modèles d’état, algorithmes de recherche non inform�
 ## Authors
 
 Erkin Tunc Boya · Semih DOYNUK · Karam ELNASORY
+
 Université Clermont Auvergne
 
 ## Contenu
