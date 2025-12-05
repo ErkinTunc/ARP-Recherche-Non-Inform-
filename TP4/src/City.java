@@ -1,5 +1,3 @@
-
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -7,9 +5,9 @@ import java.util.Scanner;
 
 public class City
 {
-    private String name ;
+    private final String name ;
 
-    private Coordonates coordonates ;
+    private final Coordonates coordonates ;
 
     public City ( String name , Coordonates coordonates )
     {

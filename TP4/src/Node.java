@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class Node
@@ -77,7 +76,6 @@ public class Node
     {
         return this.state ;
     }
-
 
     /**
      * 
