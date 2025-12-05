@@ -38,7 +38,7 @@ public class City
     }
 
     /**
-     * @deprecated 
+     * @deprecated Because we now read multiple cities from a file
      * Read a representation of a City from a file
      * Format is : name x y
      * @param file
@@ -82,8 +82,10 @@ public class City
     {
         ArrayList<City> cities = new ArrayList<>();
 
-        try (Scanner scanner = new Scanner(file)) {
-            while (scanner.hasNextLine()) {
+        try (Scanner scanner = new Scanner(file))
+        {
+            while (scanner.hasNextLine())
+            {
                 String line = scanner.nextLine().trim();
                 if (line.isEmpty()) continue;
 
@@ -93,17 +95,22 @@ public class City
 
                 // Some input files may not include a textual name; use the first token as name
                 String name = tokens[0];
-                try {
+                try
+                {
                     int x = Integer.parseInt(tokens[1]);
                     int y = Integer.parseInt(tokens[2]);
                     Coordonates coord = new Coordonates(x, y);
                     cities.add(new City(name, coord));
-                } catch (NumberFormatException nfe) {
+                }
+                catch (NumberFormatException nfe)
+                {
                     // skip malformed lines
-                    continue;
+                    System.err.println("Skipping malformed line: " + line);
                 }
             }
-        } catch (FileNotFoundException e) {
+        }
+        catch (FileNotFoundException e)
+        {
             System.err.println("File not found: " + e.getMessage());
         }
 
